@@ -50,6 +50,14 @@ export default class FieldService {
       comment: null,
       assessment: null,
     }),
+    new Operation({
+      id: 'f112-o6',
+      type: OperationType.HARVESTING,
+      date: { year: 2020, month: 9, day: 20 },
+      area: 50.0,
+      comment: null,
+      assessment: Assessment.SATISFACTORILY,
+    }),
   ];
 
   /**

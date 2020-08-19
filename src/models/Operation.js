@@ -2,7 +2,7 @@ import TDate from './TDate';
 
 /**
  * @readonly
- * @enum {number}
+ * @enum {number|string}
  */
 export const OperationType = {
   PLOWING: 0, // Вспашка
@@ -11,16 +11,25 @@ export const OperationType = {
   WATERING: 3, // Полив
   RIGGING: 4, // Прикатывание
   HARVESTING: 5, // Сбор урожая
+  0: 'PLOWING',
+  1: 'BOWLING',
+  2: 'FERTILIZATION',
+  3: 'WATERING',
+  4: 'RIGGING',
+  5: 'HARVESTING',
 };
 
 /**
  * @readonly
- * @enum {number}
+ * @enum {number|string}
  */
 export const Assessment = {
   EXCELLENT: 0, // Отлично
   SATISFACTORILY: 1, // Удовлетворительно
   BADLY: 2, // Плохо
+  0: 'EXCELLENT',
+  1: 'SATISFACTORILY',
+  2: 'BADLY',
 };
 
 export default class Operation {

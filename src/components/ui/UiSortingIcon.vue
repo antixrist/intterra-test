@@ -2,9 +2,8 @@
   <svg
     class="ui-sorting-icon"
     :class="{
-      'is-active': active,
       'is-ascending': direction === 'asc',
-      'is-descending': direction !== 'asc',
+      'is-descending': direction === 'desc',
     }"
     width="10"
     height="5"
@@ -17,18 +16,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-
-export default Vue.extend({
+export default {
   props: {
     direction: {
       type: String,
-      validator: (direction) => ['asc', 'desc'].includes(direction),
+      validator: direction => ['asc', 'desc'].includes(direction),
     },
-    active: Boolean,
   },
   data: () => ({}),
-});
+};
 </script>
 
 <style lang="scss" scoped>
@@ -40,7 +36,8 @@ export default Vue.extend({
 
   color: $color-gray-2;
 
-  &.is-active {
+  &.is-ascending,
+  &.is-descending {
     color: $color-link;
   }
   &.is-ascending {
