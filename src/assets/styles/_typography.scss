@@ -1,0 +1,16 @@
+@import 'fonts';
+@import '~normalize.css';
+
+#app {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $color-main;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.8px;
+}
